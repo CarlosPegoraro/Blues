@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
+:root {
+    --main-font: 'Montserrat', sans-serif;
+    --second-font: 'Montserrat Alternates', sans-serif;
+    --main-color: #FDCE5D;
+    --main-color-dark: #d69a0d;
+    --second-color: #A81E1E;
+    --second-color-light: #e75a5a;
+    --second-color-vlight: #fcb8b8;
+    --second-color-dark: #5a0909;
+    --black: #252525;
+    --grafite: #353535;
+    --lead: #5c5c5c;
+    --gray: #a3a3a3;
+    --silver: #c4c4c4;
+    --cream: #d9d9d9;
+    --white: #eaeaea;
+}
