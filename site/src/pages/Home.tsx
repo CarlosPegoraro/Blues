@@ -5,7 +5,7 @@ import pinacolada from '../assets/drinks/pinacolada.jpg'
 import sexBeach from '../assets/drinks/sexBeach.jpg' 
 import tequilaSunrise from '../assets/drinks/tequilaSunrise.jpg' 
 import whiskeySour from '../assets/drinks/whiskeySour.jpg'
-import { Navbar, Caroseul, Footer, Cards } from '../components/Model'
+import { Navbar, Caroseul, Footer, Cards,  } from '../components/Model'
 
 export function Home() {
     return (
@@ -20,7 +20,7 @@ export function Home() {
                     <Cards src={zombieImg} alt="zombie" title='Zombie' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe" width='18rem'/>
                 </div>
             </section>
-            <Footer/>
+            <Footer/>   
         </div>
     );
 }
