@@ -43,6 +43,26 @@ export function Navbar() {
     );
 }
 
+type CaroseulProps = {
+    src: string;
+    alt: string;
+    text: string
+}
+
+export function CaroseulItem(props: CaroseulProps) {
+    return (
+        <div className="carousel-item">
+            <img src={props.src} className="caroseulImg" alt={props.alt} />
+            <div className="container">
+                <div className="carousel-caption">
+                    <a href="#" className="caroseulTxt">{props.text}</a>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+
 export function Caroseul() {
     return (
         <main className="bg-gray-black">
@@ -50,38 +70,10 @@ export function Caroseul() {
                 <div className="container-fluid text-center mt-5 pt-5">
                     <div id="myCarousel" className="carousel slide mx-auto" data-bs-ride="carousel">
                         <div className="carousel-inner">
-                            <div className="carousel-item">
-                                <img src={whiskeyImgL} className="caroseulImg" alt="" />
-                                <div className="container">
-                                    <div className="carousel-caption">
-                                        <a href="#" className="caroseulTxt">whiskey</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="carousel-item">
-                                <img src={negroniImgL} className="caroseulImg" alt="" />
-                                <div className="container">
-                                    <div className="carousel-caption">
-                                        <a href="#" className="caroseulTxt">Negroni</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="carousel-item active">
-                                <img src={cosmopolitanImgL} className="caroseulImg" alt="" />
-                                <div className="container">
-                                    <div className="carousel-caption">
-                                        <a href="#" className="caroseulTxt">Cosmopolitan</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="carousel-item active">
-                                <img src={mojitoImgL} className="caroseulImg" alt="" />
-                                <div className="container">
-                                    <div className="carousel-caption">
-                                        <a href="#" className="caroseulTxt">Mojito</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <CaroseulItem src={whiskeyImgL} alt="whiskey" text='whiskey'/>
+                            <CaroseulItem src={mojitoImgL} alt="mojito" text='mojito'/>
+                            <CaroseulItem src={cosmopolitanImgL} alt="cosmopolitan" text='cosmopolitan'/>
+                            <CaroseulItem src={negroniImgL} alt="negroni" text='negroni'/>
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel"
                             data-bs-slide="prev">
@@ -97,5 +89,63 @@ export function Caroseul() {
                 </div>
             </section>
         </main>
+    );
+}
+
+
+
+type CardsProps = {
+    src: string;
+    alt: string;
+    title: string;
+    text: string;
+    width: string;
+}
+
+export function Cards(props: CardsProps) {
+    return (
+        <div className="col m-3">
+            <div className="card" style={{width: props.width}}>
+                <img src={props.src} className="card-img-top" alt={props.alt}/>
+                <div className="card-body">
+                    <h5 className="card-title">{props.title}</h5>
+                    <p className="card-text">{props.text}</p>
+                    <a href="#" className="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export function Footer(){
+    return (
+        <div className="container-fluid bg-light">
+        <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
+            <div className="col-md-4 d-flex align-items-center">
+                <a href="/" className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <img src={logoSlim} alt=""/>
+                </a>
+                <span className="mb-3 mb-md-0 text-muted">© 2023 Blues - The Drink Society</span>
+            </div>
+
+            <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li className="ms-3">
+                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-twitter"></i>
+                    </a>
+                </li>
+                <li className="ms-3">
+                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li className="ms-3">
+                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-tiktok"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
     );
 }
