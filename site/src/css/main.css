@@ -1,11 +1,13 @@
 @import url("resources.css");
 
+
 body {
   overflow-x: hidden;
   background-image: url('../assets/wave.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  
 }
 
 ::-webkit-scrollbar {
@@ -17,11 +19,23 @@ body {
   border: none;
 }
 
-.bg-light {
+.bg-gradient {
   background: linear-gradient(to top, var(--cream), var(--white)) !important;
+}
+
+.bg-dark {
+  background-color: var(--black);
+  border-radius: 10px;
 }
 .text-light {
   color: var(--white) !important;
+}
+.lead {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--white);
 }
 
 /*navbar*/
@@ -40,7 +54,7 @@ header{
   font-family: var(--second-font);
   font-style: normal;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 36px;
   /* identical to box height */
 
@@ -81,11 +95,11 @@ header{
   background-color: #35353535;
   padding: 10px 20px;
   border-radius: 10px;
-  font-family: var(--second-font);
+  font-family: var(--main-font);
   font-weight: 700;
   text-decoration: none;
   font-size: 2rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: var(--cream);
   transition: 0.5s;
 }
@@ -168,6 +182,6 @@ header{
 
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: white;
+  color: var(--second-color);
   transition: 0.5s;
 }

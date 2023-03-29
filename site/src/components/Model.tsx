@@ -4,6 +4,9 @@ import negroniImgL from '../assets/drinks/caroseul/negroni.jpg'
 import cosmopolitanImgL from '../assets/drinks/caroseul/cosmopolitan.jpg'
 import mojitoImgL from '../assets/drinks/caroseul/mojito.jpeg'
 
+/*Imports*/
+import { useRef } from 'react';
+
 export function Navbar() {
     return (
         <header className="container-fluid position-fixed top-0">
@@ -46,12 +49,13 @@ export function Navbar() {
 type CaroseulProps = {
     src: string;
     alt: string;
-    text: string
+    text: string;
+    href: string;
 }
 
 export function CaroseulItem(props: CaroseulProps) {
     return (
-        <div className="carousel-item">
+        <div className="carousel-item active">
             <img src={props.src} className="caroseulImg" alt={props.alt} />
             <div className="container">
                 <div className="carousel-caption">
@@ -65,15 +69,15 @@ export function CaroseulItem(props: CaroseulProps) {
 
 export function Caroseul() {
     return (
-        <main className="bg-gray-black">
+        <main>
             <section className="pt-5">
                 <div className="container-fluid text-center mt-5 pt-5">
                     <div id="myCarousel" className="carousel slide mx-auto" data-bs-ride="carousel">
                         <div className="carousel-inner">
-                            <CaroseulItem src={whiskeyImgL} alt="whiskey" text='whiskey'/>
-                            <CaroseulItem src={mojitoImgL} alt="mojito" text='mojito'/>
-                            <CaroseulItem src={cosmopolitanImgL} alt="cosmopolitan" text='cosmopolitan'/>
-                            <CaroseulItem src={negroniImgL} alt="negroni" text='negroni'/>
+                            <CaroseulItem src={mojitoImgL} href="#" alt="Mojito" text='Mojito' />
+                            <CaroseulItem src={whiskeyImgL} href="#" alt="Whiskey" text='Whiskey' />
+                            <CaroseulItem src={cosmopolitanImgL} href="#" alt="Cosmopolitan" text='Cosmopolitan' />
+                            <CaroseulItem src={negroniImgL} href="#" alt="Negroni" text='Negroni' />
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel"
                             data-bs-slide="prev">
@@ -92,8 +96,6 @@ export function Caroseul() {
     );
 }
 
-
-
 type CardsProps = {
     src: string;
     alt: string;
@@ -105,8 +107,8 @@ type CardsProps = {
 export function Cards(props: CardsProps) {
     return (
         <div className="col m-3">
-            <div className="card" style={{width: props.width}}>
-                <img src={props.src} className="card-img-top" alt={props.alt}/>
+            <div className="card" style={{ width: props.width }}>
+                <img src={props.src} className="card-img-top" alt={props.alt} />
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
                     <p className="card-text">{props.text}</p>
@@ -117,35 +119,96 @@ export function Cards(props: CardsProps) {
     );
 }
 
-export function Footer(){
+type principalCardProps = {
+    src: string;
+    alt: string;
+    title: string;
+    descripton: string;
+    itens: string;
+    text: string
+}
+
+
+export function PrincipalCard(props: principalCardProps) {
+    const listRef = useRef(null);
+
+    function renderListItems(items: any[]) {
+        return items.map((item, index) => <li key={index}>{item}</li>);
+    }
+
+    const { itens } = props;
+    const arrayData = itens.includes(';') ? itens.split(';') : [itens];
+
+    return (
+        <div className="card card-lg">
+            <img src={props.src} className="card-img-top card-img-top-lg" alt={props.alt} />
+            <div className="card-body card-body-lg justify-content-center text-center">
+                <h5 className="card-title card-title-lg mt-3 mb-5">{props.title}</h5>
+                <div className="row">
+                    <h5 className="card-title">Descrição</h5>
+                    <p className="card-text text-light">
+                        {props.descripton}
+                    </p>
+                    <h5 className="card-title">Ingredientes</h5>
+                    <p className="card-text">
+                        <ul className='list-unstyled card-text text-light' ref={listRef}>
+                            {renderListItems(arrayData)}
+                        </ul>
+                    </p>
+                    <h5 className="card-title">Modo de Preparo</h5>
+                    <p className="card-text text-light">
+                        {props.text}
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
+}
+type TextDay = {
+    text: string
+}
+
+
+export function TextDay(props: TextDay) {
+    return (
+        <div className="px-4 py-5 my-5 text-center">
+            <img className="d-block mx-auto mb-4" src={logoSlim} alt="logo"/>
+            <div className="col-lg-6 mx-auto">
+            <p className="lead mb-4">{props.text}</p>
+            </div>
+        </div>
+    );
+}
+
+export function Footer() {
     return (
         <div className="container-fluid bg-light">
-        <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
-            <div className="col-md-4 d-flex align-items-center">
-                <a href="/" className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <img src={logoSlim} alt=""/>
-                </a>
-                <span className="mb-3 mb-md-0 text-muted">© 2023 Blues - The Drink Society</span>
-            </div>
+            <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
+                <div className="col-md-4 d-flex align-items-center">
+                    <a href="/" className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <img src={logoSlim} alt="" />
+                    </a>
+                    <span className="mb-3 mb-md-0 text-muted">© 2023 Blues - The Drink Society</span>
+                </div>
 
-            <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li className="ms-3">
-                    <a href="http://" target="_blank" rel="noopener noreferrer">
-                        <i className="bi bi-twitter"></i>
-                    </a>
-                </li>
-                <li className="ms-3">
-                    <a href="http://" target="_blank" rel="noopener noreferrer">
-                        <i className="bi bi-instagram"></i>
-                    </a>
-                </li>
-                <li className="ms-3">
-                    <a href="http://" target="_blank" rel="noopener noreferrer">
-                        <i className="bi bi-tiktok"></i>
-                    </a>
-                </li>
-            </ul>
-        </footer>
-    </div>
+                <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li className="ms-3">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <i className="bi bi-twitter"></i>
+                        </a>
+                    </li>
+                    <li className="ms-3">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <i className="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li className="ms-3">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <i className="bi bi-tiktok"></i>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
     );
 }
