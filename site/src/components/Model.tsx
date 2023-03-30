@@ -24,19 +24,19 @@ export function Navbar() {
                         id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">Home</a>
+                                <a className="nav-link" aria-current="page" href="#"><i className="bi bi-house-fill"></i> Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">populares</a>
+                                <a className="nav-link" href="#"><i className="bi bi-stars"></i>  populares</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">compartilhar</a>
+                                <a className="nav-link" href="#"><i className="bi bi-share-fill"></i> compartilhar</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">procurar</a>
+                                <a className="nav-link" href="#"><i className="bi bi-search"></i> procurar</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Curiosidades</a>
+                                <a className="nav-link" href="#"><i className="bi bi-puzzle-fill"></i> Curiosidades</a>
                             </li>
                         </ul>
                     </div>
@@ -70,9 +70,9 @@ export function CaroseulItem(props: CaroseulProps) {
 export function Caroseul() {
     return (
         <main>
-            <section className="pt-5">
-                <div className="container-fluid text-center mt-5 pt-5">
-                    <div id="myCarousel" className="carousel slide mx-auto" data-bs-ride="carousel">
+            <section>
+                <div id='carouselBox' className="container-fluid text-center bg-dark md">
+                    <div id="myCarousel" className="carousel slide mt-5 mx-auto" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             <CaroseulItem src={mojitoImgL} href="#" alt="Mojito" text='Mojito' />
                             <CaroseulItem src={whiskeyImgL} href="#" alt="Whiskey" text='Whiskey' />
@@ -142,21 +142,21 @@ export function PrincipalCard(props: principalCardProps) {
     return (
         <div className="card card-lg">
             <img src={props.src} className="card-img-top card-img-top-lg" alt={props.alt} />
-            <div className="card-body card-body-lg justify-content-center text-center">
-                <h5 className="card-title card-title-lg mt-3 mb-5">{props.title}</h5>
+            <div className="card-body justify-content-center text-center">
+                <h5 className="card-title mt-3 mb-5">{props.title}</h5>
                 <div className="row">
                     <h5 className="card-title">Descrição</h5>
-                    <p className="card-text text-light">
+                    <p className="card-text text-dark">
                         {props.descripton}
                     </p>
                     <h5 className="card-title">Ingredientes</h5>
                     <p className="card-text">
-                        <ul className='list-unstyled card-text text-light' ref={listRef}>
+                        <ul className='list-unstyled card-text text-dark' ref={listRef}>
                             {renderListItems(arrayData)}
                         </ul>
                     </p>
                     <h5 className="card-title">Modo de Preparo</h5>
-                    <p className="card-text text-light">
+                    <p className="card-text text-dark">
                         {props.text}
                     </p>
                 </div>
@@ -182,11 +182,11 @@ export function TextDay(props: TextDay) {
 
 export function Footer() {
     return (
-        <div className="container-fluid bg-light">
-            <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top">
+        <div className="container-fluid bg-dark rounded-0">
+            <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4">
                 <div className="col-md-4 d-flex align-items-center">
                     <a href="/" className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                        <img src={logoSlim} alt="" />
+                        <img src={logoSlim} id="logoFooter" alt="logo" />
                     </a>
                     <span className="mb-3 mb-md-0 text-muted">© 2023 Blues - The Drink Society</span>
                 </div>
@@ -194,17 +194,17 @@ export function Footer() {
                 <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
                     <li className="ms-3">
                         <a href="http://" target="_blank" rel="noopener noreferrer">
-                            <i className="bi bi-twitter"></i>
+                            <i className="bi bi-twitter text-white"></i>
                         </a>
                     </li>
                     <li className="ms-3">
                         <a href="http://" target="_blank" rel="noopener noreferrer">
-                            <i className="bi bi-instagram"></i>
+                            <i className="bi bi-instagram text-white"></i>
                         </a>
                     </li>
                     <li className="ms-3">
                         <a href="http://" target="_blank" rel="noopener noreferrer">
-                            <i className="bi bi-tiktok"></i>
+                            <i className="bi bi-tiktok text-white"></i>
                         </a>
                     </li>
                 </ul>

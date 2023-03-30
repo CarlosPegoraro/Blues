@@ -71,8 +71,11 @@ header{
 
 /*caroseul*/
 
+#carouselBox {
+  padding: 0;
+}
+
 #myCarousel {
-  width: 80%;
   height: 40rem;
 }
 
@@ -87,7 +90,6 @@ header{
   }
 }
 .carousel-inner {
-  border-radius: 20px;
   box-shadow: 2px 2px 4px #252525ad;
 }
 
@@ -139,6 +141,8 @@ header{
 }
 
 .card-title {
+  font-weight: 500;
+  font-size: 1.5rem;
   color: var(--main-color-dark);
   font-family: var(--second-font);
 }
@@ -184,4 +188,10 @@ header{
   text-transform: uppercase;
   color: var(--second-color);
   transition: 0.5s;
+}
+
+/*Footer*/
+
+#logoFooter {
+  width: 50px;
 }

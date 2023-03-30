@@ -21,7 +21,7 @@ export function Home() {
                     <Cards src={tequilaSunrise} alt="tequila Sunrise" title='tequila Sunrise' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe" width='18rem'/>
                 </div>
             </section>
-            <section className="container-fluid p-5 mt-5 mb-0">
+            <section className="container-fluid p-5 mt-5 mb-0 bg-dark">
                 <div className="row d-flex justify-content-center align-items-center">
                     <h1 className="title m-5">Drink em Destaque</h1>
                     <PrincipalCard 
