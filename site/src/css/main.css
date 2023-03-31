@@ -157,6 +157,7 @@ header{
 }
 
 .card-img-top {
+  border-radius: 10px 10px 0px 0px;
   height: 15rem;
   box-shadow: 2px 2px 4px #252525ad;
 }

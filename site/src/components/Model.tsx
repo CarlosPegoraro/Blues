@@ -149,7 +149,7 @@ export function PrincipalCard(props: principalCardProps) {
     return (
         <div className="card card-lg">
             <img src={props.src} className="card-img-top card-img-top-lg" alt={props.alt} />
-            <div className="card-body justify-content-center text-center">
+            <div className="card-body justify-content-center text-center bg-white">
                 <h5 className="card-title text-second text-uppercase mt-3 mb-5">{props.title}</h5>
                 <div className="row">
                     <h5 className="card-title">Descrição</h5>
