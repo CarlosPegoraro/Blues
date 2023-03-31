@@ -1,12 +1,16 @@
 import { Route, Routes } from "react-router-dom";
+import { CreatePage } from "./pages/CreatePage";
 import { Home } from './pages/Home';
-import { Information } from "./pages/Information";
+import { Notices } from "./pages/Notices";
+import { Search } from "./pages/Search";
 
 export function Router() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/informations" element={<Information />} />
+            <Route path="/notices" element={<Notices />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/create" element={<CreatePage />} />
         </Routes>
     )
 }

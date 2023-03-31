@@ -5,8 +5,12 @@ import pinacolada from '../assets/drinks/pinacolada.jpg'
 import sexBeach from '../assets/drinks/sexBeach.jpg' 
 import tequilaSunrise from '../assets/drinks/tequilaSunrise.jpg' 
 import whiskeySour from '../assets/drinks/whiskeySour.jpg'
-import { Navbar, Caroseul, Footer, Cards, PrincipalCard, Informations,  } from '../components/Model'
-import { Information } from './Information'
+
+/*Imports*/
+import { Navbar, Footer  } from '../components/Model'
+import { Caroseul } from '../components/Carousel'
+import { Cards, PrincipalCard } from '../components/Cards'
+import { Information } from '../components/Information'
 
 export function Home() {
     return (
@@ -14,7 +18,7 @@ export function Home() {
             <Navbar />
             <Caroseul />
             <section className="container-fluid m-5 p-5 mb-0">
-                <h1 className="title m-5">Drink da semana</h1>
+                <h1 id='popular' className="title text-second my-5">Drink da semana</h1>
                 <div className="row justify-content-center align-items-center">
                     <Cards src={zombieImg} alt="zombie" title='Zombie' text="The quick brown fox jumps over the lazy dog, showcasing all 26 letters of the alphabet.3333" width='18rem' />
                     <Cards src={martinez} alt="Martinez" title='Martinez' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe" width='18rem'/>
@@ -24,10 +28,10 @@ export function Home() {
             </section>
             <section className="container-fluid p-5 mt-5 mb-0 bg-dark">
                 <div className="row d-flex justify-content-center align-items-center">
-                    <h1 className="title m-5">Drink em Destaque</h1>
+                    <h1 className="title text-primary my-5">Drink em Destaque</h1>
                     <PrincipalCard 
                         /*Image*/
-                        src={sexBeach} 
+                        src={bloodyMary} 
                         /*alternitave Text*/
                         alt='Sex on the Beach' 
                         /*Drinks' Name*/
@@ -44,9 +48,9 @@ export function Home() {
                 
             </section>
             <section className="container-fluid mt-5 p-5 mb-0">
-                <h1 className="title m-5">Curiosidade Do Dia</h1>
-                <div className="row justify-content-center align-items-center bg-dark">
-                    <Informations title='' text='Você é capaz de conquistar tudo o que deseja se mantiver o foco e a determinação no seu caminho.' />
+                <h1 className="title text-second m-5">Curiosidade Do Dia</h1>
+                <div className="row justify-content-center align-items-center bg-dark text-light">
+                    <Information title='' text='Você é capaz de conquistar tudo o que deseja se mantiver o foco e a determinação no seu caminho.' />
                 </div>
             </section>
             <Footer/>   
