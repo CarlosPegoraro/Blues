@@ -24,7 +24,7 @@ export function Navbar() {
                         id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#"><i className="bi bi-house-fill"></i> Home</a>
+                                <a className="nav-link" aria-current="page" href="/"><i className="bi bi-house-fill"></i> Home</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#"><i className="bi bi-stars"></i>  populares</a>
@@ -36,7 +36,7 @@ export function Navbar() {
                                 <a className="nav-link" href="#"><i className="bi bi-search"></i> procurar</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><i className="bi bi-puzzle-fill"></i> Curiosidades</a>
+                                <a className="nav-link" href="/informations"><i className="bi bi-puzzle-fill"></i> Curiosidades</a>
                             </li>
                         </ul>
                     </div>
@@ -59,7 +59,7 @@ export function CaroseulItem(props: CaroseulProps) {
             <img src={props.src} className="caroseulImg" alt={props.alt} />
             <div className="container">
                 <div className="carousel-caption">
-                    <a href="#" className="caroseulTxt">{props.text}</a>
+                    <button className='btn btn-primary'><a href="#" className="caroseulTxt">{props.text}</a></button>
                 </div>
             </div>
         </div>
@@ -105,13 +105,20 @@ type CardsProps = {
 }
 
 export function Cards(props: CardsProps) {
+    const maxCaracter = 100
+    if(props.text.length > maxCaracter) {
+        var text =  props.text.substring(0, maxCaracter);
+    } else {
+        var text = props.text;
+    }
+
     return (
         <div className="col m-3">
             <div className="card" style={{ width: props.width }}>
                 <img src={props.src} className="card-img-top" alt={props.alt} />
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
-                    <p className="card-text">{props.text}</p>
+                    <p className="card-text" style={{maxWidth: "200px"}}>{text}</p>
                     <a href="#" className="btn btn-primary">Ver mais</a>
                 </div>
             </div>
@@ -143,7 +150,7 @@ export function PrincipalCard(props: principalCardProps) {
         <div className="card card-lg">
             <img src={props.src} className="card-img-top card-img-top-lg" alt={props.alt} />
             <div className="card-body justify-content-center text-center">
-                <h5 className="card-title mt-3 mb-5">{props.title}</h5>
+                <h5 className="card-title text-second text-uppercase mt-3 mb-5">{props.title}</h5>
                 <div className="row">
                     <h5 className="card-title">Descrição</h5>
                     <p className="card-text text-dark">
@@ -164,15 +171,32 @@ export function PrincipalCard(props: principalCardProps) {
         </div>
     );
 }
-type TextDay = {
-    text: string
+
+type Information = {
+    title: string;
+    text: string;
 }
 
-
-export function TextDay(props: TextDay) {
+export function Information(props: Information) {
     return (
-        <div className="px-4 py-5 my-5 text-center">
+        <div className=" py-5 my-5 text-center">
+            <h1 className="title pb-5">{props.title}</h1>
             <img className="d-block mx-auto mb-4" src={logoSlim} alt="logo"/>
+            <div className="col-lg-6 mx-auto">
+            <p className="lead mb-4">{props.text}</p>
+            </div>
+        </div>
+    );
+}
+type Informations = {
+    title: string;
+    text: string;
+}
+
+export function Informations(props: Informations) {
+    return (
+        <div className=" py-5 my-5 text-center">
+            <h1 className="title pb-5">{props.title}</h1>
             <div className="col-lg-6 mx-auto">
             <p className="lead mb-4">{props.text}</p>
             </div>

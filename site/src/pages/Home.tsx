@@ -5,7 +5,8 @@ import pinacolada from '../assets/drinks/pinacolada.jpg'
 import sexBeach from '../assets/drinks/sexBeach.jpg' 
 import tequilaSunrise from '../assets/drinks/tequilaSunrise.jpg' 
 import whiskeySour from '../assets/drinks/whiskeySour.jpg'
-import { Navbar, Caroseul, Footer, Cards, PrincipalCard, TextDay,  } from '../components/Model'
+import { Navbar, Caroseul, Footer, Cards, PrincipalCard, Informations,  } from '../components/Model'
+import { Information } from './Information'
 
 export function Home() {
     return (
@@ -15,9 +16,9 @@ export function Home() {
             <section className="container-fluid m-5 p-5 mb-0">
                 <h1 className="title m-5">Drink da semana</h1>
                 <div className="row justify-content-center align-items-center">
-                    <Cards src={zombieImg} alt="zombie" title='Zombie' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe" width='18rem' />
+                    <Cards src={zombieImg} alt="zombie" title='Zombie' text="The quick brown fox jumps over the lazy dog, showcasing all 26 letters of the alphabet.3333" width='18rem' />
                     <Cards src={martinez} alt="Martinez" title='Martinez' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe" width='18rem'/>
-                    <Cards src={pinacolada} alt="Pinacolada" title='Pinacolada' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe" width='18rem'/>
+                    <Cards src={pinacolada} alt="Pinacolada" title='Pinacolada' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycweasas" width='18rem'/>
                     <Cards src={tequilaSunrise} alt="tequila Sunrise" title='tequila Sunrise' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe" width='18rem'/>
                 </div>
             </section>
@@ -44,8 +45,8 @@ export function Home() {
             </section>
             <section className="container-fluid mt-5 p-5 mb-0">
                 <h1 className="title m-5">Curiosidade Do Dia</h1>
-                <div className="row justify-content-center align-items-center bg-dark text-white">
-                    <TextDay text='Você é capaz de conquistar tudo o que deseja se mantiver o foco e a determinação no seu caminho.' />
+                <div className="row justify-content-center align-items-center bg-dark">
+                    <Informations title='' text='Você é capaz de conquistar tudo o que deseja se mantiver o foco e a determinação no seu caminho.' />
                 </div>
             </section>
             <Footer/>   
