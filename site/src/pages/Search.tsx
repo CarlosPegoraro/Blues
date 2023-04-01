@@ -12,12 +12,28 @@ import { Navbar, Footer } from '../components/Model'
 import { Cards } from '../components/Cards'
 
 export function Search() {
-    const [nome, setNome] = useState('');
-
+    const [drink, setDrink] = useState('');
+    const drinkLowcase = drink.toLowerCase()
+    
     function handleSubmit(event: { preventDefault: () => void }) {
         event.preventDefault();
-        alert(`Nome: ${nome}`);
+
+        switch (drinkLowcase) {
+            case "zombie":
+                break;
+            case "sex on the beach":
+                break;
+            case "pinacolada":
+                break;
+            case "tequila sunrise":
+                break;
+            case "martinez":
+                break;
+            default:
+                break;
+        }
     }
+
     return (
         <div>
             <Navbar />
@@ -25,12 +41,12 @@ export function Search() {
                 <h1 id='popular' className="title my-5">Pesquisar Drink</h1>
                 <label className='form-label'>
                     Palavra-chave:
-                    <input className='form-control text-second' type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+                    <input className='form-control text-second' type="text" value={drink} onChange={(e) => setDrink(e.target.value)} />
                 </label>
                 <button className='btn btn-primary mx-5' type="submit">Enviar</button>
             </form>
-            <section className="container-fluid m-5 mt-0 p-5 mb-0">
-                <h1 id='popular' className="title my-5">Resultados da Pesquisa</h1>
+            <section id='drinks' className="container-fluid m-5 mt-0 p-5 mb-0">
+                <h1 className="title my-5">Resultados da Pesquisa</h1>
                 <div className="row justify-content-center align-items-center">
                     <Cards src={zombieImg} alt="zombie" title='Zombie' text="The quick brown fox jumps over the lazy dog, showcasing all 26 letters of the alphabet." width='18rem' />
                     <Cards src={zombieImg} alt="zombie" title='Zombie' text="The quick brown fox jumps over the lazy dog, showcasing all 26 letters of the alphabet." width='18rem' />

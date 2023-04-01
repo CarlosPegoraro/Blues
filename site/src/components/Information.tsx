@@ -23,20 +23,17 @@ type Informations = {
 }
 
 export function Informations(props: Informations) {
-    const randomNumber = Math.floor(Math.random() * 4)
-    let randomStyle = ' ';
+    const randomNumber = Math.floor(Math.random() * 3)
+    let randomStyle = '';
     switch (randomNumber) {
+        case 0:
+            randomStyle = "bg-primary text-dark";
+            break;
         case 1:
             randomStyle= "bg-dark text-light";
             break;
         case 2:
             randomStyle = "bg-light text-dark";
-            break;
-        case 3:
-            randomStyle = "bg-primary text-dark";
-            break;
-        case 0:
-            randomStyle = "bg-second text-light";
             break;
     
         default:
