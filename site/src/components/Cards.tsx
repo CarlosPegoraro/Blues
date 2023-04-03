@@ -111,3 +111,52 @@ export function CreateCard() {
         </div>
     );
 }
+
+type horizontalCardProps = {
+    src: string;
+    alt: string;
+    title: string;
+    itens: string;
+    text: string
+}
+
+
+export function HorizontalCard(props: horizontalCardProps) {
+    const listRef = useRef(null);
+
+    function renderListItems(items: any[]) {
+        return items.map((item, index) => <li key={index}>{item}</li>);
+    }
+
+    const { itens } = props;
+    const arrayData = itens.includes(';') ? itens.split(';') : [itens];
+
+    return (
+        <div className="card mb-3">
+            <div className="row g-0">
+                <div className="col-md-4">
+                <img src={props.src} className="img-fluid rounded-4" alt={props.alt}/>
+                </div>
+                <div className="col-md-8">
+                    <div className="card-body rounded-4 mx-5">
+                        <div className="row">
+                            <div className="col-6">
+                                <h5 className="card-title card-title-lg">{props.title}</h5>
+                                <h5 className="card-title">ingredientes</h5>
+                                <p className="card-text">
+                                    <ul className='list-unstyled' ref={listRef}>
+                                        {renderListItems(arrayData)}
+                                    </ul>
+                                </p>
+                            </div>
+                            <div className="col-6">
+                                <h5 className="card-title">Modo de Preparo</h5>
+                                <p className="card-text">{props.text}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}

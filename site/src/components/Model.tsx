@@ -1,7 +1,7 @@
 import logoSlim from '../assets/logoSlim.svg'
 
 export function Navbar() {
-    return (
+    return ( 
         <header className="container-fluid position-fixed top-0">
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">

@@ -16,7 +16,7 @@ export function CaroseulItem(props: CaroseulProps) {
             <img src={props.src} className="caroseulImg" alt={props.alt} />
             <div className="container">
                 <div className="carousel-caption">
-                    <button className='btn btn-second'><a href="#" className="caroseulTxt">{props.text}</a></button>
+                    <button className='btn btn-second'><a href={props.href} className="caroseulTxt">{props.text}</a></button>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@ export function Caroseul() {
                     <div id="myCarousel" className="carousel slide mt-5 mx-auto" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             <CaroseulItem src={mojitoImgL} href="#" alt="Mojito" text='Mojito' />
-                            <CaroseulItem src={whiskeyImgL} href="#" alt="Whiskey" text='Whiskey' />
+                            <CaroseulItem src={whiskeyImgL} href="/whiskeys" alt="Whiskey" text='Whiskey' />
                             <CaroseulItem src={cosmopolitanImgL} href="#" alt="Cosmopolitan" text='Cosmopolitan' />
                             <CaroseulItem src={negroniImgL} href="#" alt="Negroni" text='Negroni' />
                         </div>
