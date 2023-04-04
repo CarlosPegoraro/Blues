@@ -1,4 +1,5 @@
-import { Navbar, Caroseul, Footer } from '../components/Model'
+import { Caroseul } from '../../components/Carousel';
+import { Navbar, Footer } from '../../components/Model'
 
 export function NegroniPage() {
     return (

@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import { Notices } from "./pages/Notices";
 import { Search } from "./pages/Search";
 import { Whiskeys } from "./pages/whiskeys/WhiskeysHome";
+import { NegroniPage } from "./pages/drinks/Negroni";
 
 export function Router() {
     return (
@@ -14,7 +15,10 @@ export function Router() {
             <Route path="/notices" element={<Notices />} />
             <Route path="/search" element={<Search />} />
             <Route path="/create" element={<CreatePage />} />
+            /*Drinks*/
             <Route path="/drinks/aperol" element={<AperolPage />} />
+            <Route path="/drinks/negroni" element={<NegroniPage />} />
+
         </Routes>
     )
 }

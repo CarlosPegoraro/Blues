@@ -1,16 +1,13 @@
-import whiskeyImgL from '../assets/drinks/caroseul/whiskey.jpg'
-import negroniImgL from '../assets/drinks/caroseul/negroni.jpg'
-import cosmopolitanImgL from '../assets/drinks/caroseul/cosmopolitan.jpg'
-import mojitoImgL from '../assets/drinks/caroseul/mojito.jpg'
 
-type CaroseulProps = {
+
+type caroseulItensProps = {
     src: string;
     alt: string;
     text: string;
     href: string;
 }
 
-export function CaroseulItem(props: CaroseulProps) {
+export function CaroseulItem(props: caroseulItensProps) {
     return (
         <div className="carousel-item active">
             <img src={props.src} className="caroseulImg" alt={props.alt} />
@@ -23,18 +20,26 @@ export function CaroseulItem(props: CaroseulProps) {
     );
 }
 
+type CaroseulProps = {
+    image: string; href: string; alt: string; text: string;
+    image2: string; href2: string; alt2: string; text2: string;
+    image3: string; href3: string; alt3: string; text3: string;
+    image4: string; href4: string; alt4: string; text4: string;
+    
+}
 
-export function Caroseul() {
+
+export function Caroseul(props: CaroseulProps) {
     return (
         <main>
             <section>
                 <div id='carouselBox' className="container-fluid text-center bg-dark md">
                     <div id="myCarousel" className="carousel slide mt-5 mx-auto" data-bs-ride="carousel">
                         <div className="carousel-inner">
-                            <CaroseulItem src={mojitoImgL} href="#" alt="Mojito" text='Mojito' />
-                            <CaroseulItem src={whiskeyImgL} href="/whiskeys" alt="Whiskey" text='Whiskey' />
-                            <CaroseulItem src={cosmopolitanImgL} href="#" alt="Cosmopolitan" text='Cosmopolitan' />
-                            <CaroseulItem src={negroniImgL} href="#" alt="Negroni" text='Negroni' />
+                            <CaroseulItem src={props.image} href={props.href} alt={props.alt} text={props.text} />
+                            <CaroseulItem src={props.image2} href={props.href2} alt={props.alt2} text={props.text2} />
+                            <CaroseulItem src={props.image3} href={props.href3} alt={props.alt3} text={props.text3} />
+                            <CaroseulItem src={props.image4} href={props.href4} alt={props.alt4} text={props.text4} />
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel"
                             data-bs-slide="prev">

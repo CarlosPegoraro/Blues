@@ -6,6 +6,13 @@ import sexBeach from '../assets/drinks/sexBeach.jpg'
 import tequilaSunrise from '../assets/drinks/tequilaSunrise.jpg' 
 import whiskeySour from '../assets/drinks/whiskeySour.jpg'
 
+/*Carousel Images*/
+
+import whiskeyImgL from '../assets/drinks/caroseul/whiskey.jpg'
+import negroniImgL from '../assets/drinks/caroseul/negroni.jpg'
+import cosmopolitanImgL from '../assets/drinks/caroseul/cosmopolitan.jpg'
+import mojitoImgL from '../assets/drinks/caroseul/mojito.jpg'
+
 /*Imports*/
 import { Navbar, Footer  } from '../components/Model'
 import { Caroseul } from '../components/Carousel'
@@ -16,7 +23,11 @@ export function Home() {
     return (
         <div>
             <Navbar />
-            <Caroseul />
+            <Caroseul image={negroniImgL} href='/drinks/negroni' alt='negroni' text='Negroni'
+                    image2={cosmopolitanImgL} href2='' alt2='' text2=''
+                    image3={mojitoImgL} href3='' alt3='' text3=''
+                    image4={whiskeyImgL} href4='' alt4="" text4=''
+            />
             <section className="container-fluid m-5 p-5 mb-0">
                 <h1 id='popular' className="title text-second my-5">Drink da semana</h1>
                 <div className="row justify-content-center align-items-center">
@@ -49,7 +60,7 @@ export function Home() {
             </section>
             <section className="container-fluid mt-5 p-5 mb-0">
                 <h1 className="title text-second m-5">Curiosidade Do Dia</h1>
-                <div className="row justify-content-center align-items-center bg-dark text-light">
+                <div className="row justify-content-center align-items-center bg-dark text-light rounded-4">
                     <Information title='' text='Você é capaz de conquistar tudo o que deseja se mantiver o foco e a determinação no seu caminho.' />
                 </div>
             </section>
