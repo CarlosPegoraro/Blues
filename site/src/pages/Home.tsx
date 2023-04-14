@@ -29,7 +29,7 @@ export function Home() {
                     image4={whiskeyImgL} href4='/drinks/whiskey' alt4="whiskey" text4='Whiskey'
             />
             <section className="container-fluid m-5 p-5 mb-0">
-                <h1 id='popular' className="title text-second my-5">Drink da semana</h1>
+                <h1 id='popular' className="title text-secondary my-5">Drink da semana</h1>
                 <div className="row justify-content-center align-items-center">
                     <Cards src={zombieImg} alt="zombie" title='Zombie' text="The quick brown fox jumps over the lazy dog, showcasing all 26 letters of the alphabet.3333" 
                             href='/drinks/zombie' width='18rem' />
@@ -63,7 +63,7 @@ export function Home() {
                 
             </section>
             <section className="container-fluid mt-5 p-5 mb-0">
-                <h1 className="title text-second m-5">Curiosidade Do Dia</h1>
+                <h1 className="title text-secondary m-5">Curiosidade Do Dia</h1>
                 <div className="row justify-content-center align-items-center bg-dark text-light rounded-4">
                     <Information title='' text='Você é capaz de conquistar tudo o que deseja se mantiver o foco e a determinação no seu caminho.' />
                 </div>
