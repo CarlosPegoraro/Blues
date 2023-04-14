@@ -11,6 +11,9 @@ import { Navbar, Footer  } from '../components/Model'
 import {  CreateCard } from '../components/Cards'
 
 export function CreatePage() {
+
+    document.title = "Crie o  seu - Blues"
+    
     return (
         <div>
             <Navbar />

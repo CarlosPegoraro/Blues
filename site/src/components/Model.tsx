@@ -42,7 +42,7 @@ export function Navbar() {
 export function Footer() {
     return (
         <div className="container-fluid bg-dark rounded-0">
-            <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4">
+            <footer className="d-flex flex-wrap justify-content-between align-items-center py-3">
                 <div className="col-md-4 d-flex align-items-center">
                     <a href="/" className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
                         <img src={logoSlim} id="logoFooter" alt="logo" />

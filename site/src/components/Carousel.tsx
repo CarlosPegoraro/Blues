@@ -13,7 +13,7 @@ export function CaroseulItem(props: caroseulItensProps) {
             <img src={props.src} className="caroseulImg" alt={props.alt} />
             <div className="container">
                 <div className="carousel-caption">
-                    <button className='btn btn-second'><a href={props.href} className="caroseulTxt">{props.text}</a></button>
+                    <button className='btn btn-secondary'><a href={props.href} className="caroseulTxt">{props.text}</a></button>
                 </div>
             </div>
         </div>

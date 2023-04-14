@@ -24,17 +24,21 @@ export function Home() {
         <div>
             <Navbar />
             <Caroseul image={negroniImgL} href='/drinks/negroni' alt='negroni' text='Negroni'
-                    image2={cosmopolitanImgL} href2='' alt2='' text2=''
-                    image3={mojitoImgL} href3='' alt3='' text3=''
-                    image4={whiskeyImgL} href4='' alt4="" text4=''
+                    image2={cosmopolitanImgL} href2='/drinks/cosmopolitan' alt2='cosmopolitan' text2='cosmopolitan'
+                    image3={mojitoImgL} href3='/drinks/mojito' alt3='cosmopolitan' text3='Cosmopolitan'
+                    image4={whiskeyImgL} href4='/drinks/whiskey' alt4="whiskey" text4='Whiskey'
             />
             <section className="container-fluid m-5 p-5 mb-0">
                 <h1 id='popular' className="title text-second my-5">Drink da semana</h1>
                 <div className="row justify-content-center align-items-center">
-                    <Cards src={zombieImg} alt="zombie" title='Zombie' text="The quick brown fox jumps over the lazy dog, showcasing all 26 letters of the alphabet.3333" width='18rem' />
-                    <Cards src={martinez} alt="Martinez" title='Martinez' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe" width='18rem'/>
-                    <Cards src={pinacolada} alt="Pinacolada" title='Pinacolada' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycweasas" width='18rem'/>
-                    <Cards src={tequilaSunrise} alt="tequila Sunrise" title='tequila Sunrise' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe" width='18rem'/>
+                    <Cards src={zombieImg} alt="zombie" title='Zombie' text="The quick brown fox jumps over the lazy dog, showcasing all 26 letters of the alphabet.3333" 
+                            href='/drinks/zombie' width='18rem' />
+                    <Cards src={martinez} alt="Martinez" title='Martinez' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe"
+                            href='/drinks/martini' width='18rem'/>
+                    <Cards src={pinacolada} alt="Pinacolada" title='Pinacolada' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycweasas"
+                            href='/drinks/pinacolada' width='18rem'/>
+                    <Cards src={tequilaSunrise} alt="tequila Sunrise" title='tequila Sunrise' text="ncbeyucbyuegcyugeycwgwyecywcyegcyecygywgecygcwewecyycwe"
+                            href='/drinks/tequilasunrise' width='18rem'/>
                 </div>
             </section>
             <section className="container-fluid p-5 mt-5 mb-0 bg-dark">

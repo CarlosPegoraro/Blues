@@ -34,13 +34,13 @@
     color: var(--black);
     transition: 0.5s;
 }
-.btn-second {
+.btn-secondary {
     background-color: var(--second-color);
     border: var(--second-color);
 
 }
 
-.btn-second:hover {
+.btn-secondary:hover {
     background-color: var(--second-color-light);
     border: var(--second-color-light);
     color: var(--black);
@@ -57,7 +57,7 @@
 .bg-primary {
     background-color: var(--main-color) !important;
 }
-.bg-second {
+.bg-secondary {
     background-color: var(--second-color) !important;
 }
 
@@ -77,6 +77,6 @@
 .text-primary {
     color: var(--main-color) !important;
 }
-.text-second {
+.text-secondary {
     color: var(--second-color) !important;
 }

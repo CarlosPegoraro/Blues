@@ -192,6 +192,18 @@ header{
   text-transform: uppercase;
 }
 
+/*Generic Texts*/
+
+.longText {
+  font-family: var(--text-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 36px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+}
+
 /*Footer*/
 
 #logoFooter {

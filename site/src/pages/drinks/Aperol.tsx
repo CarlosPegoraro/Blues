@@ -1,16 +1,25 @@
 import { HorizontalCard } from '../../components/Cards';
-import { Caroseul } from '../../components/Carousel';
 import { Navbar, Footer } from '../../components/Model'
+import { LongText } from '../../components/Texts';
+
+/*Drink Image*/
 import aperol from '../../assets/drinks/aperol.jpg'
 
-export function AperolPage() {
+export function Aperol() {
+
+    document.title = "Aperol - Blues"
+
     return (
         <div>
             <Navbar />
-            <section className="container-fluid my-5 py-5">
-                <HorizontalCard src={aperol} alt={'aperol'} title={'Aperol'} itens={'hshshshshsh;shhshshshshhshsh;skskksksksks;hehyeydeasasas;asasasasasassaas;asasassaassasa;asassasaassaas;sa'} text={'hhabxuhgbvgvyvrtfvasasasasasasasguvyfr6hbutf6rfubbrfftft'}/>
+            <section className="container-fluid my-5 p-5">
+                <h1 className="title text-secondary m-5">Aperol</h1>
+                <HorizontalCard src={aperol} alt={'aperol'}
+                    itens={'hshshshshsh;shhshshshshhshsh;skskksksksks;hehyeydeasasas;asasasasasassaas;asasassaassasa;asassasaassaas;sa;sassasa;sasasasa;assasasa;assasaas;assaassa;assasasa;assasasa;assasasas;sasasasasa;sasasasa;assasasaas;asasasas;'}
+                    text={'hhabxuhgbvgvyvrtfvasasasasasasasguvyfr6hbutf6rfubbrfftft'} />
             </section>
-            <Footer/>
+            <LongText title='Sobre o drink' text='nybybybvygtvtygvtbyuhtbyuuvuvugguhugvvhvvvhvvvvvhuhvvhvvhvvhvhvhvhvvvvvhvvhvvhvhvhvhuvhhvuvhhvhvhv'/>
+            <Footer />
         </div>
     );
 }

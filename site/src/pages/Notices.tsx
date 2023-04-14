@@ -2,6 +2,9 @@ import { Informations } from '../components/Information';
 import { Navbar, Footer } from '../components/Model';
 
 export function Notices() {
+
+    document.title = "Curiosidades - Blues"
+
     return (
         <div>
             <Navbar />

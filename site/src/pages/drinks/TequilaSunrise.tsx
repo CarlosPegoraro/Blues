@@ -5,9 +5,9 @@ import { LongText } from '../../components/Texts';
 /*Drink Image*/
 import aperol from '../../assets/drinks/aperol.jpg'
 
-export function Marguerita() {
+export function TequilaSunrise() {
 
-    document.title = "Marguerita - Blues"
+    document.title = "TequilaSunrise - Blues"
 
     return (
         <div>

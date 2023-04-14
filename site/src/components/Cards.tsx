@@ -8,6 +8,7 @@ type CardsProps = {
     title: string;
     text: string;
     width: string;
+    href: string;
 }
 
 export function Cards(props: CardsProps) {
@@ -25,7 +26,7 @@ export function Cards(props: CardsProps) {
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
                     <p className="card-text" style={{ maxWidth: "200px" }}>{text}</p>
-                    <a href="#" className="btn btn-second">Ver mais informações</a>
+                    <a href={props.href} className="btn btn-secondary">Ver mais informações</a>
                 </div>
             </div>
         </div>
@@ -115,7 +116,6 @@ export function CreateCard() {
 type horizontalCardProps = {
     src: string;
     alt: string;
-    title: string;
     itens: string;
     text: string
 }
@@ -141,7 +141,6 @@ export function HorizontalCard(props: horizontalCardProps) {
                     <div className="card-body rounded-4 mx-5">
                         <div className="row">
                             <div className="col-6">
-                                <h5 className="card-title card-title-lg">{props.title}</h5>
                                 <h5 className="card-title">ingredientes</h5>
                                 <p className="card-text">
                                     <ul className='list-unstyled' ref={listRef}>
