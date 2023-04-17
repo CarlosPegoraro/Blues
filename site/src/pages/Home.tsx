@@ -1,5 +1,5 @@
 import zombieImg from '../assets/drinks/zombie.jpg'
-import bloodyMary from '../assets/drinks/bloodyMary.jpg'
+import bloodyMary from '../assets/drinks/bloodymary/bloodyMary.jpg'
 import martinez from '../assets/drinks/martinez.jpg'
 import pinacolada from '../assets/drinks/pinacolada.jpg' 
 import sexBeach from '../assets/drinks/sexBeach.jpg' 

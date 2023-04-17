@@ -1,5 +1,4 @@
-import React, { Component, ChangeEvent } from 'react';
-import { Cards } from '../components/Cards';
+import { Component, ChangeEvent } from 'react';
 
 /*Images of drinks*/
 
@@ -8,7 +7,7 @@ import pinacolada from '../assets/drinks/pinacolada.jpg'
 import sexBeach from '../assets/drinks/sexBeach.jpg'
 import tequilaSunrise from '../assets/drinks/tequilaSunrise.jpg'
 import whiskeySour from '../assets/drinks/whiskeySour.jpg'
-import { BloodyMaryList, ZombieList } from '../components/ListSeach';
+import { BloodyMaryList, NegroniList, ZombieList } from '../components/ListSeach';
 
 interface propsSearchModule {
   keyword: string;
@@ -41,7 +40,13 @@ class SearchModule extends Component<{}, propsSearchModule> {
       <section className="container-fluid m-5 mt-0 p-5 mb-0">
         <BloodyMaryList/>
       </section>;
-    } else {
+    } else if (keyword === 'negroni') {
+      searchDiv = 
+      <section className="container-fluid m-5 mt-0 p-5 mb-0">
+        <NegroniList/>
+      </section>;
+    } 
+    else {
       searchDiv = <p className='title text-danger'>drink inexistente</p>;
     }
     this.setState({ actuallyDiv: searchDiv });
