@@ -8,6 +8,7 @@ import sexBeach from '../assets/drinks/sexBeach.jpg'
 import tequilaSunrise from '../assets/drinks/tequilaSunrise.jpg'
 import whiskeySour from '../assets/drinks/whiskeySour.jpg'
 import { BloodyMaryList, NegroniList, ZombieList } from '../components/ListSeach';
+import { BloodyMary } from './drinks/bloodymary/BloodyMary';
 
 interface propsSearchModule {
   keyword: string;
@@ -32,12 +33,12 @@ class SearchModule extends Component<{}, propsSearchModule> {
     let searchDiv: JSX.Element;
     if (keyword === 'zombie') {
       searchDiv = 
-      <section className="container-fluid m-5 mt-0 p-5 mb-0">
+      <section className="container-fluid mt-0 p-5 mb-0">
         <ZombieList/>
       </section>;
     } else if (keyword === 'bloody mary' || keyword === 'bloodymary') {
       searchDiv = 
-      <section className="container-fluid m-5 mt-0 p-5 mb-0">
+      <section className="container-fluid mt-0 p-5 mb-0">
         <BloodyMaryList/>
       </section>;
     } else if (keyword === 'negroni') {
